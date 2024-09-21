@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFeed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="Agro Feed">
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Sign In and Sign Up Buttons -->
+            <div class="auth-buttons">
+                <a href="#signin" class="btn">Sign In</a>
+                <a href="#" class="btn" onclick="openModal()">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupName">Your Name:</label>
+            <input type="text" id="signupName" name="signupName" required>
+
+            <label for="signupEmail">Your Email:</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
+
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Agro Feed Co.</h1>
+            <p>Quality feed for healthy poultry.</p>
+            <a href="#products" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/layers-feeds.jpg">
+                <h3>Layer Feed</h3>
+                <p>Special feed for egg-laying poultry with high calcium content.</p>
+                <button onclick="addToCart('Layer Feed')">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Broiler.png">
+                <h3>Broiler Feed</h3>
+                <p>Rich in protein, this feed supports fast growth for broilers.</p>
+                <button onclick="addToCart('Broiler Feed')">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Starter.jpg">
+                <h3>Starter Feed</h3>
+                <p>Perfect for young chicks with a balanced nutrient profile for fast growth.</p>
+                <button onclick="addToCart('Starter Feed')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Agro Feed Co. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
